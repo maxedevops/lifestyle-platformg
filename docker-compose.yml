@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  # Frontend Dev Server (React + Vite)
+  web:
+    build: 
+      context: .
+      dockerfile: ./apps/web/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8787
+    depends_on:
+      - worker-api
+
+  # Local Worker Simulation (Miniflare / Wrangler)
+  worker-api:
+    build:
+      context: ./apps/worker-api
+    ports:
+      - "8787:8787"
+      - "9229:9229" # Debugger port
+    volumes:
+      - ./apps/worker-api:/app
+    environment:
+      - NODE_ENV=development
+    command: npx wrangler dev --local --persist --ip 0.0.0.0
+
+  # Performance Testing (k6)
+  load-tester:
+    image: grafana/k6
+    volumes:
+      - ./scripts:/scripts
+    entrypoint: ["k6", "run", "/scripts/load-test.js"]
+    profiles: ["test"] # Only runs when explicitly called

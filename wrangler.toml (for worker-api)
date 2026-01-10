@@ -1,0 +1,15 @@
+name = "worker-api"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+ENVIRONMENT = "production"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "lifestyle-platform-db"
+database_id = "your-id-here"
+
+[[kv_namespaces]]
+binding = "KV_TRUST_SCORES"
+id = "your-id-here"

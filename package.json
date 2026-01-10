@@ -1,0 +1,23 @@
+{
+  "name": "lifestyle-platform",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "vitest",
+    "infra:plan": "cd infrastructure && terraform plan",
+    "infra:apply": "cd infrastructure && terraform apply"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.0",
+    "typescript": "^5.0.0",
+    "prettier": "^3.0.0",
+    "eslint": "^8.0.0",
+    "vitest": "^0.34.0"
+  }
+}

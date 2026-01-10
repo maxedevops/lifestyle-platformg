@@ -1,0 +1,15 @@
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+COPY apps/web/package*.json ./apps/web/
+COPY packages/shared-types ./packages/shared-types
+RUN npm install
+COPY . .
+RUN npm run build --workspace=web
+
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=builder /app/apps/web/dist ./dist
+RUN npm install -g serve
+EXPOSE 3000
+CMD ["serve", "-s", "dist", "-l", "3000"]

@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  web:
+    build: { context: ., dockerfile: ./apps/web/Dockerfile }
+    ports: ["3000:3000"]
+    environment: ["VITE_API_URL=http://localhost:8787"]
+  worker-api:
+    build: { context: ./apps/worker-api }
+    ports: ["8787:8787"]
+    command: npx wrangler dev --local --persist
