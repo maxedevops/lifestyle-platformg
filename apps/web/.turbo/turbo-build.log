@@ -1,0 +1,19 @@
+$ remix build
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+[7m[34m info [39m[27m building...[90m (NODE_ENV=production)[39m
+adding `isbot` to your package.json, you should commit this change
+[0.20ms] ".env.local"
+bun install v1.3.5 (1e86cebd)
+Resolving dependencies
+Resolved, downloaded and extracted [26]
+Saved lockfile
+
++ isbot@4.4.0 (v5.1.32 available)
+
+2 packages installed [997.00ms]
+Error: Missing "root" route file in C:\Project\LSGoogle\lifestyle-platform\apps\web\app
+    at resolveConfig (C:\Project\LSGoogle\lifestyle-platform\node_modules\.bun\@remix-run+dev@2.17.3+8ea147ca6486165e\node_modules\@remix-run\dev\dist\config.js:163:11)
+    at async Object.readConfig (C:\Project\LSGoogle\lifestyle-platform\node_modules\.bun\@remix-run+dev@2.17.3+8ea147ca6486165e\node_modules\@remix-run\dev\dist\config.js:75:10)
+    at async Object.build (C:\Project\LSGoogle\lifestyle-platform\node_modules\.bun\@remix-run+dev@2.17.3+8ea147ca6486165e\node_modules\@remix-run\dev\dist\cli\commands.js:151:18)
+    at async Object.run (C:\Project\LSGoogle\lifestyle-platform\node_modules\.bun\@remix-run+dev@2.17.3+8ea147ca6486165e\node_modules\@remix-run\dev\dist\cli\run.js:249:7)
+error: script "build" exited with code 1

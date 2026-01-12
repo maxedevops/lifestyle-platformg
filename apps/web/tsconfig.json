@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./app/*"],
+      "@lifestyle/shared-types": ["../../packages/shared-types/src/index.ts"],
+      "@lifestyle/crypto-lib": ["../../packages/crypto-lib/src/index.ts"]
+    }
+  }
+}

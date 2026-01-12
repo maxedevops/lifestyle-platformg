@@ -1,6 +1,7 @@
 {
   "name": "lifestyle-platform",
   "private": true,
+  "packageManager": "bun@1.2.15",
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -14,10 +15,10 @@
     "infra:apply": "cd infrastructure && terraform apply"
   },
   "devDependencies": {
-    "turbo": "^1.10.0",
-    "typescript": "^5.0.0",
-    "prettier": "^3.0.0",
     "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "turbo": "^2.7.4",
+    "typescript": "^5.0.0",
     "vitest": "^0.34.0"
   }
 }
