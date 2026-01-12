@@ -20,5 +20,9 @@
     "turbo": "^2.7.4",
     "typescript": "^5.0.0",
     "vitest": "^0.34.0"
+  },
+  "dependencies": {
+    "@simplewebauthn/server": "^13.2.2",
+    "hono": "^4.11.3"
   }
 }

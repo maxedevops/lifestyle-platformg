@@ -3,6 +3,8 @@ import { cors } from 'hono/cors';
 import { secureHeaders } from 'hono/secure-headers';
 import { authMiddleware } from './middleware/auth';
 import { trustEngine } from './middleware/trust';
+import { SessionManager } from './session';
+
 
 const app = new Hono<{ Bindings: Bindings }>();
 
@@ -27,4 +29,6 @@ api.post('/messages/send', async (c) => {
 
 app.route('/api/v1', api);
 
+export { SessionManager };
+//export class SessionManager extends DurableObject { ... }
 export default app;

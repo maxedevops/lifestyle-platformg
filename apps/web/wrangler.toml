@@ -1,0 +1,5 @@
+name = "lifestyle-web"
+pages_build_output_dir = "./build/client"
+
+[compatibility]
+compatibility_date = "2026-01-12"

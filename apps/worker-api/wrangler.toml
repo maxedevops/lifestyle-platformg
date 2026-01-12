@@ -12,7 +12,7 @@ ORIGIN = "https://lifestyle-platform.com" # Production origin
 [[d1_databases]]
 binding = "DB"
 database_name = "lifestyle-platform-db"
-database_id = "YOUR_D1_DATABASE_ID_HERE" # Replace with actual ID
+database_id = "ecb7d78a-979a-4fc9-a05e-18ecde5c080e" # Replace with actual ID
 
 [[r2_buckets]]
 binding = "R2_BUCKET"
@@ -31,6 +31,16 @@ binding = "KV_USERS" # To store WebAuthn authenticators and challenges
 id = "YOUR_KV_USERS_ID_HERE" # Replace with actual ID
 
 # Durable Object Bindings
-[[durable_objects.bindings]]
-name = "SESSION_MANAGER"
-class_name = "SessionManager"
+#[[durable_objects.bindings]]
+#name = "SESSION_MANAGER"
+#class_name = "SessionManager"
+
+[durable_objects]
+bindings = [
+  { name = "SESSION_MANAGER", class_name = "SessionManager" }
+]
+
+# This is what the warning was asking for:
+[[migrations]]
+tag = "v1"
+new_classes = [ "SessionManager" ]
