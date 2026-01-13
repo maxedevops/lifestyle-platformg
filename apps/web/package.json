@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "remix dev --manual",
-    "build": "remix build && mv build ../../dist",
+    "build": "remix build",
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
