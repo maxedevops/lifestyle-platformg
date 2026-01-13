@@ -1,5 +1,9 @@
-name = "lifestyle-platform"
+name = "your-project-name"
 pages_build_output_dir = "./build/client"
+compatibility_date = "2026-01-13"
 
-[compatibility]
-compatibility_date = "2026-01-12"
+# You can also add your database and KV bindings here
+[[d1_databases]]
+binding = "DB"
+database_name = "lifestyle-db"
+database_id = "ecb7d78a-979a-4fc9-a05e-18ecde5c080e"
