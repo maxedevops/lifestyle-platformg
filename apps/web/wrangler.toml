@@ -1,4 +1,4 @@
-name = "lifestyle-web"
+name = "lifestyle-platform"
 pages_build_output_dir = "./build/client"
 
 [compatibility]
