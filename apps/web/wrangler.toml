@@ -5,5 +5,5 @@ compatibility_date = "2026-01-13"
 # You can also add your database and KV bindings here
 [[d1_databases]]
 binding = "DB"
-database_name = "lifestyle-db"
+database_name = "lifestyle-platform-db"
 database_id = "ecb7d78a-979a-4fc9-a05e-18ecde5c080e"
