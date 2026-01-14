@@ -2,10 +2,9 @@
 export default {
   serverBuildTarget: "cloudflare-pages",
   serverModuleFormat: "esm",
-  serverPlatform: "neutral",
 
   appDirectory: "app",
-  assetsBuildDirectory: "public/build",
+  assetsBuildDirectory: "build/client",
   publicPath: "/build/",
 
   ignoredRouteFiles: ["**/.*"],
